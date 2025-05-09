@@ -83,9 +83,46 @@ ul.task-list li input[type="checkbox"] {
 background: #00000000;
       }
 </style>
+<style>
+#title-block-header.quarto-title-block.default .quarto-title-meta {
+  color: rgba(255, 255, 255, 0.8);
+}
 
 
-<link rel="stylesheet" href="header.css">
+#title-block-header {
+  background:
+    /* top, transparent black overlay */
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    /* bottom, image */
+    url(./img/nn_wanderer.png);
+  background-size: cover;
+  background-position-y: center;
+  height: 250px;
+  opacity: 0.8;
+  z-index: -1; /* Keep behind potential future elements if needed */
+
+  /* Ensure the block still takes up space */
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+#title-block-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+</style>
+
+
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -135,7 +172,7 @@ background: #00000000;
 <header id="title-block-header">
     <!-- <h1 class="title">Yannick Winkler</h1> --> <!-- Title rendering removed -->
         </header>
-<!-- ::: {.column-page} -->
+<!--  ::: {.column-page} -->
 <!-- Use column-page for better control over content width on wider screens -->
 <p><b> Welcome! </b></p>
 <p>I am a Research Associate at the Computational Communication Research Group, Department of Communication, Johannes Gutenberg University Mainz. My research focuses on political communication across social media platforms, employing advanced quantitative methods with an emphasis on machine learning techniques and large language models (LLMs).</p>
@@ -159,23 +196,6 @@ background: #00000000;
 </section>
 </div>
 <!-- ::: -->
-<style>
-/* Optional: Add some specific CSS for this page directly */
-/* Or better, add to your main styles.scss */
-.custom-grid .g-col {
-  margin-bottom: 1.5rem; /* Add spacing between grid items */
-}
-.custom-grid h3 {
-  margin-bottom: 0.75rem;
-  font-size: 1.2rem; /* Slightly smaller headings for grid items */
-  border-bottom: 1px solid #eee; /* Subtle separator */
-  padding-bottom: 0.3rem;
-}
-.custom-grid .btn {
-  margin-right: 0.5rem;
-  margin-top: 0.5rem;
-}
-</style>
 
 
 </main>  

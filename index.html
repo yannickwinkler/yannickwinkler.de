@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Yannick Winkler</title>
+<title>Home – Yannick Winkler</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,6 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -83,43 +84,6 @@ ul.task-list li input[type="checkbox"] {
 background: #00000000;
       }
 </style>
-<style>
-#title-block-header.quarto-title-block.default .quarto-title-meta {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-
-#title-block-header {
-  background:
-    /* top, transparent black overlay */
-    linear-gradient(
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-    ),
-    /* bottom, image */
-    url(./img/nn_wanderer.png);
-  background-size: cover;
-  background-position-y: center;
-  height: 250px;
-  opacity: 0.8;
-  z-index: -1; /* Keep behind potential future elements if needed */
-
-  /* Ensure the block still takes up space */
-  display: block;
-  padding: 0;
-  margin: 0;
-}
-
-#title-block-header::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-</style>
 
 
 <link rel="stylesheet" href="style.css">
@@ -167,11 +131,14 @@ background: #00000000;
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla">
- <main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
 <header id="title-block-header">
-  <!-- <h1 class="title">Yannick Winkler</h1> --> <!-- Title rendering removed -->
+  <!-- <h1 class="title">Home</h1> --> <!-- Title rendering removed -->
+      
     </header>
+
+
 <!--  ::: {.column-page} -->
 <!-- Use column-page for better control over content width on wider screens -->
 <p><b> Welcome! </b></p>
@@ -181,28 +148,34 @@ background: #00000000;
 <div class="grid custom-grid">
 <!-- Using a grid for featured content -->
 <section id="recent-research" class="level3 g-col-12 g-col-md-4">
-<h3 data-anchor-id="recent-research"><i class="bi bi-journal-text"></i> Recent Research <!-- Using Bootstrap icons --></h3>
+<h3 class="anchored" data-anchor-id="recent-research"><i class="bi bi-journal-text"></i> Recent Research <!-- Using Bootstrap icons --></h3>
 <p>My latest work explores LLMs for generating experimental stimuli. You can find details on this and other publications here:</p>
 <p><a href="./research.html" class="btn btn-sm btn-outline-primary"><i class="bi bi-arrow-right-short"></i> View Publications</a></p>
 </section>
 <section id="featured-project" class="level3 g-col-12 g-col-md-4">
-<h3 data-anchor-id="featured-project"><i class="bi bi-display"></i> Featured Project</h3>
+<h3 class="anchored" data-anchor-id="featured-project"><i class="bi bi-display"></i> Featured Project</h3>
 <p>I’m currently working on <strong>obsidianchatR</strong>, a way to chat with my obsidian notes.</p>
 <p><a href="link-to-project-repo" class="btn btn-sm btn-outline-secondary"><i class="bi bi-github"></i> Project Repository</a></p>
 </section>
 <section id="current-teaching" class="level3 g-col-12 g-col-md-4">
-<h3 data-anchor-id="current-teaching"><i class="bi bi-easel2"></i> Current Teaching</h3>
+<h3 class="anchored" data-anchor-id="current-teaching"><i class="bi bi-easel2"></i> Current Teaching</h3>
 <p>This Sommersemester, I am teaching <strong>Datenanalyse mit R</strong>. The course is designed as an inverted classroom. The course website can be found <a href="https://stats.ifp.uni-mainz.de/ba-datenanalyse/">here</a>.</p>
 </section>
 </div>
 <!-- ::: -->
 
 
-</main>  
-</div>
- <!-- /main -->
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

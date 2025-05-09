@@ -1,5 +1,20 @@
 <header id="title-block-header">
-    <!-- $if(title)$<h1 class="title">$title$</h1>$endif$ --> <!-- Title rendering removed -->
+    $if(image)$
+    <style>
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url($image$);
+      background-size: cover;
+      background-position-y: center;
+      height: 200px;
+    }
+    </style>
+    <div class="overlay"></div>
+    <div class="hero">
+    $endif$
     $if(subtitle)$
     <p class="subtitle">$subtitle$</p>
     $endif$
@@ -12,8 +27,11 @@
     $endif$
     $if(abstract)$
     <div class="abstract">
-    <div class="abstract-title">$abstract-tile$</div>
+    <div class="abstract-title">$abstract-title$</div>
     $abstract$
     </div>
     $endif$
-</header>
+    $if(image)$
+    </div>
+    $endif$
+    </header>

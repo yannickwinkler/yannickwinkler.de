@@ -13,3 +13,44 @@
   margin-right: 0.5rem;
   margin-top: 0.5rem;
 }
+
+/* css styles */
+#title-block-header.quarto-title-block .quarto-title-meta {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+#title-block-header {
+  background:
+    /* top, transparent black overlay */
+    linear-gradient(
+      rgba(0, 0, 0, 0.7), /* Adjust darkness/opacity */
+      rgba(0, 0, 0, 0.7)
+    ),
+    /* bottom, image */
+    url(./img/nn_wanderer.png);
+  background-size: cover;
+  background-position-y: center;
+  height: 250px;   
+  opacity: 0.8; 
+  z-index: -1; /* Keep behind potential future elements if needed */
+
+  /* Ensure the block still takes up space */
+  display: block;
+  /* Remove default padding/margins if they interfere */
+  padding: 0;
+  margin: 0;
+  /* Add specific padding if you want content inside spaced from edges */
+  /* padding: 2em; */
+}
+
+/* If you remove *all* content (title, author, date) from the partial, */
+/* ensure the header still renders with height */
+#title-block-header:empty {
+    min-height: 350px; /* Or match the height above */
+}
+
+/* Hide the title block header without the quarto-title-block class */
+#title-block-header:not(.quarto-title-block) {
+  display: none !important;
+}

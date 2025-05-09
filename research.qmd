@@ -1,4 +1,5 @@
 ---
+title: "Research" 
 format:
   html:
     css: style.css  
@@ -45,10 +46,6 @@ include-in-header:
         right: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.4);
-      }
-
-      header#title-block-header:not(:first-of-type) {
-        display: none;
       }
       </style>
 ---

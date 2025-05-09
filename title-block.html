@@ -1,6 +1,15 @@
 <header id="title-block-header">
     $if(image)$
     <style>
+    .overlay {
+      background-color: #212529;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
     .hero {
       display: flex;
       flex-direction: column;
@@ -11,10 +20,21 @@
       background-position-y: center;
       height: 200px;
     }
+
+    h1.title {
+      position: relative;
+      color: white;
+    }
+    p.subtitle, p.author, p.date, div.abstract{
+      position: relative;
+      color: white;
+      clear: both;
+    }
     </style>
     <div class="overlay"></div>
     <div class="hero">
     $endif$
+    $if(title)$<h1 class="title">$title$</h1>$endif$
     $if(subtitle)$
     <p class="subtitle">$subtitle$</p>
     $endif$

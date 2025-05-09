@@ -1,1 +1,15 @@
 /* css styles */
+
+.custom-grid .g-col {
+  margin-bottom: 1.5rem; /* Add spacing between grid items */
+}
+.custom-grid h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem; /* Slightly smaller headings for grid items */
+  border-bottom: 1px solid #eee; /* Subtle separator */
+  padding-bottom: 0.3rem;
+}
+.custom-grid .btn {
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}

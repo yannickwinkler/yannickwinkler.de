@@ -1,0 +1,11 @@
+_quarto/
+_freeze/
+*.Rproj
+.Rhistory
+.RData
+.Ruserdata
+_site/
+docs/
+/.quarto/
+.DS_Store
+notes.txt

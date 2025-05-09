@@ -1,0 +1,74 @@
+[
+  {
+    "year": 2024,
+    "authors": "Winkler, Y., Jost, P., Jürgens, P., Schwager, N.",
+    "title": "Trial and Insight: Combining Quantitative Content Analysis and AI for Experimental Stimulus Generation",
+    "conference": "Joint Conference of the Digital Communication and Methods Divisions of the German Communication Association (DGPuK)",
+    "location": "Hamburg, Germany",
+    "slides_url": "",
+    "type": "conference"
+  },
+  {
+    "year": 2023,
+    "authors": "Scharkow, M., Winkler, Y.",
+    "title": "KI für automatische Text- und Bildanalysen",
+    "conference": "Symposium Künstliche  Intelligenz an der JGU",
+    "location": "Mainz, Germany",
+    "slides_url": "",
+    "type": "invited_talk"
+  },
+  {
+    "year": 2023,
+    "authors": "Winkler, Y., Wurst, A.-K. & Bachl, M.",
+    "title": "No manual annotation required? Exploring dictionary, string matching, and machine learning methods for negative campaigning detection",
+    "conference": "Annual Conference of the Methods Division of the German Communication Association (DGPuK)",
+    "location": "Potsdam, Germany",
+    "slides_url": "",
+    "type": "conference"
+  },
+  {
+    "year": 2023,
+    "authors": "Winkler, Y., Wurst, A.-K. & Bachl, M.",
+    "title": "No manual annotation required? Exploring dictionary, string matching, and machine learning methods for negative campaigning detection",
+    "conference": "Annual Conference of the Methods Division of the German Communication Association (DGPuK)",
+    "location": "Potsdam, Germany",
+    "slides_url": "",
+    "type": "conference"
+  },
+  {
+    "year": 2023,
+    "authors": "Winkler, Y., Wurst, A.-K. & Bachl, M.",
+    "title": "New off-the-shelf methods: Assessing pre-trained transformers for negative campaigning detection",
+    "conference": "ECPR General Conference",
+    "location": "Prague, Czech Republic",
+    "slides_url": "",
+    "type": "conference"
+  },
+  {
+    "year": 2022,
+    "authors": "Scharkow, M., Winkler, Y., Jürgens, P. & Bachl, M.",
+    "title": "Understanding incivility in comments on political Facebook pages: Toxic people in a toxic environment?",
+    "conference": "9th European Communication Conference (ECREA)",
+    "location": "Aarhus, Denmark",
+    "slides_url": "",
+    "type": "conference"
+  },
+  {
+    "year": 2022,
+    "authors": "Bachl, M., Winkler, Y., & Scharkow, M.",
+    "title": "Individual user behavior on political Facebook pages",
+    "conference": "72nd Annual Conference of the International Communication Association (ICA)",
+    "location": "Paris",
+    "slides_url": "",
+    "type": "conference"
+  },
+  {
+    "year": 2021,
+    "authors": "Bachl, M., Scharkow, M. & Winkler, Y.",
+    "title": "News sharing by party line? An analysis of source sharing patterns in political social media discussions",
+    "conference": "71st Annual Conference of the International Communication Association (ICA)",
+    "location": "online",
+    "slides_url": "",
+    "type": "conference"
+  }
+]

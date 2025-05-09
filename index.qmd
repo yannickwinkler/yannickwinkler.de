@@ -1,0 +1,78 @@
+---
+title: "Yannick Winkler" 
+title-block-banner: "#00000000"
+title-block-banner-color: "rgba(255, 255, 255, 0.9)"
+about:
+  template: jolla # trestles , solana, marquee [https://quarto.org/docs/websites/website-about.html]
+
+format:
+  html:
+    css: header.css  
+    template-partials:
+      - title-block.html # Use the custom title block partial
+    toc: false 
+---
+
+<!-- ::: {.column-page} -->
+<!-- Use column-page for better control over content width on wider screens -->
+
+<b> Welcome! </b>
+
+I am a Research Associate at the Computational Communication Research Group, Department of Communication, Johannes Gutenberg University Mainz. My research focuses on political communication across social media platforms, employing advanced quantitative methods with an emphasis on machine learning techniques and large language models (LLMs).
+
+This website serves as a central place for my academic, professional, and personal activities. If you want to know more about me, head over to the [about page](about.qmd).
+
+------------ <!-- A horizontal rule for separation -->
+
+
+::: {.grid .custom-grid}
+<!-- Using a grid for featured content -->
+
+::: {.g-col-12 .g-col-md-4}
+### <i class="bi bi-journal-text"></i> Recent Research <!-- Using Bootstrap icons -->
+
+My latest work explores LLMs for generating experimental stimuli. You can find details on this and other publications here:
+
+[<i class="bi bi-arrow-right-short"></i> View Publications](research.qmd){.btn .btn-sm .btn-outline-primary}
+:::
+
+
+::: {.g-col-12 .g-col-md-4}
+### <i class="bi bi-display"></i> Featured Project
+
+I'm currently working on **obsidianchatR**, a way to chat with my obsidian notes.
+
+[<i class="bi bi-github"></i> Project Repository](link-to-project-repo){.btn .btn-sm .btn-outline-secondary}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### <i class="bi bi-easel2"></i> Current Teaching
+
+This Sommersemester, I am teaching **Datenanalyse mit R**. The course is designed as an inverted classroom. The course website can be found [here](https://stats.ifp.uni-mainz.de/ba-datenanalyse/).
+
+:::
+
+
+:::
+
+<!-- ::: -->
+
+
+<style>
+/* Optional: Add some specific CSS for this page directly */
+/* Or better, add to your main styles.scss */
+.custom-grid .g-col {
+  margin-bottom: 1.5rem; /* Add spacing between grid items */
+}
+.custom-grid h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem; /* Slightly smaller headings for grid items */
+  border-bottom: 1px solid #eee; /* Subtle separator */
+  padding-bottom: 0.3rem;
+}
+.custom-grid .btn {
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+</style>

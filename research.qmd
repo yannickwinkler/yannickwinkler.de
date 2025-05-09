@@ -1,0 +1,39 @@
+---
+title: "Research"
+title-block-banner: "#00000000"
+title-block-banner-color: "rgba(255, 255, 255, 0.9)"
+
+format:
+  html:
+    css: header.css  
+    template-partials:
+      - title-block.html # Use the custom title block partial
+    toc: false 
+---
+
+My research interests lie primarily in the areas of computational communication science, political communication, and user behavior on social media platforms. Below is a list of my peer-reviewed publications and conference presentations.
+
+## Publications
+
+```{r load-publications, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
+source("scripts/get_pubs.R")
+
+doi_file <- "pubs/dois.txt" 
+
+# Pass TRUE to group by year, FALSE for a single chronological list dddddd
+cat(generate_publication_list_from_file(doi_file_path = doi_file, group_by_year = TRUE))
+```
+
+## Conference Presentations
+
+```{r load-conferences, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
+source("scripts/get_conferences.R")
+cat(generate_conference_list("pubs/conferences.json", entry_type = "conference"))
+```
+
+## Invited Talks
+
+```{r load-talsk, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
+source("scripts/get_conferences.R")
+cat(generate_conference_list("pubs/conferences.json", entry_type = "invited_talk"))
+```

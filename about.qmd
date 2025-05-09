@@ -1,6 +1,6 @@
 ---
 title: "Yannick Winkler"
-subtitle: "Researcher | Politics Decoder | Former Constituency Office Manager"
+#subtitle: "Researcher | Politics Decoder | Former Constituency Office Manager"
 image: "img/yw_ghibli.png" # Your photo, shown nicely in title block
 image-title: "A Ghibli version of myself"
 about:
@@ -21,15 +21,21 @@ about:
     #   text: CV
     #   href: "path/to/your_cv.pdf"
 
+title-block-banner: "#00000000"
+title-block-banner-color: "rgba(255, 255, 255, 0.9)"
+
 toc: false
 
 format:
   html:
-    css: header.css  
+    css: style.css 
     template-partials:
       - title-block.html # Use the custom title block partial
     toc: false 
 ---
+
+<!-- <h3> Yannick Winkler <h3>
+<h4> Researcher | Politics Decoder | Former Constituency Office Manager </h4> -->
 
 I’m a research associate specializing in Computational Communication Science, with a career that bridges political science, hands-on political work, and empirical research. 
 

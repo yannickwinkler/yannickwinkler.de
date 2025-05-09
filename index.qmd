@@ -1,8 +1,10 @@
 ---
 title: "Home"
+about: 
+  template: jolla
+
 title-block-banner: "#00000000"
 title-block-banner-color: "rgba(255, 255, 255, 0.9)"
-
 format:
   html:
     css: style.css  

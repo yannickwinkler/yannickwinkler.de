@@ -1,14 +1,16 @@
 ---
-title: "Research" 
+title: "Research"
+about: 
+  template: jolla
+
+title-block-banner: "#00000000"
+title-block-banner-color: "rgba(255, 255, 255, 0.9)"
 format:
   html:
     css: style.css  
     template-partials:
       - title-block.html # Use the custom title block partial
     toc: false
-
-title-block-banner: "#00000000"
-title-block-banner-color: "rgba(255, 255, 255, 0.9)"
 ---
 
 My research interests lie primarily in the areas of computational communication science, political communication, and user behavior on social media platforms. Below is a list of my peer-reviewed publications and conference presentations.

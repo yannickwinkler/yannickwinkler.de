@@ -50,7 +50,7 @@
     min-height: 350px; /* Or match the height above */
 }
 
-/* Hide the title block header without the quarto-title-block class
+Hide the title block header without the quarto-title-block class
 #title-block-header:not(.quarto-title-block) {
   display: none !important;
-}  */
+} 

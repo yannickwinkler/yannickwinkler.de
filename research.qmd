@@ -1,14 +1,52 @@
 ---
 title: "Research"
-title-block-banner: "#00000000"
-title-block-banner-color: "rgba(255, 255, 255, 0.9)"
-
 format:
   html:
-    css: header.css  
     template-partials:
       - title-block.html # Use the custom title block partial
     toc: false 
+
+title-block-banner: "#00000000"
+title-block-banner-color: "rgba(255, 255, 255, 0.9)"
+include-in-header:
+  - text: |
+      <style>
+      #title-block-header.quarto-title-block.default .quarto-title-meta {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      
+      
+      #title-block-header {
+        background:
+          /* top, transparent black overlay */
+          linear-gradient(
+            rgba(0, 0, 0, 0.7), 
+            rgba(0, 0, 0, 0.7)
+          ),
+          /* bottom, image */
+          url(./img/nn_wanderer.png);
+        background-size: cover;
+        background-position-y: center;
+        height: 250px;   
+        opacity: 0.8; 
+        z-index: -1; /* Keep behind potential future elements if needed */
+      
+        /* Ensure the block still takes up space */
+        display: block;
+        padding: 0;
+        margin: 0;
+      }
+      
+      #title-block-header::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      </style>
 ---
 
 My research interests lie primarily in the areas of computational communication science, political communication, and user behavior on social media platforms. Below is a list of my peer-reviewed publications and conference presentations.
@@ -20,7 +58,7 @@ source("scripts/get_pubs.R")
 
 doi_file <- "pubs/dois.txt" 
 
-# Pass TRUE to group by year, FALSE for a single chronological list dddddd
+# Pass TRUE to group by year, FALSE for a single chronological list ddddddd
 cat(generate_publication_list_from_file(doi_file_path = doi_file, group_by_year = TRUE))
 ```
 

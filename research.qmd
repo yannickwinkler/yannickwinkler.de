@@ -1,31 +1,37 @@
 ---
-title: "Research"
 format:
   html:
+    css: style.css  
     template-partials:
       - title-block.html # Use the custom title block partial
-    toc: false 
+    toc: false
 
 title-block-banner: "#00000000"
+title-block-banner-color: "rgba(255, 255, 255, 0.9)"
 include-in-header:
   - text: |
       <style>
       #title-block-header.quarto-title-block.default .quarto-title-meta {
-        color: #000000;
+        color: rgba(255, 255, 255, 0.8);
       }
       
+      
       #title-block-header {
-        position: relative;
-        height: 300px;
-      }
-
-      #title-block-header::before {
-        background-image: url(/img/nn_wanderer.png);
+        background:
+          /* top, transparent black overlay */
+          linear-gradient(
+            rgba(0, 0, 0, 0.7), 
+            rgba(0, 0, 0, 0.7)
+          ),
+          /* bottom, image */
+          url(./img/nn_wanderer.png);
         background-size: cover;
         background-position-y: center;
         height: 250px;   
         opacity: 0.8; 
         z-index: -1; /* Keep behind potential future elements if needed */
+      
+        /* Ensure the block still takes up space */
         display: block;
         padding: 0;
         margin: 0;
@@ -40,6 +46,10 @@ include-in-header:
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.4);
       }
+
+      header#title-block-header:not(:first-of-type) {
+        display: none;
+      }
       </style>
 ---
 
@@ -52,7 +62,7 @@ source("scripts/get_pubs.R")
 
 doi_file <- "pubs/dois.txt" 
 
-# Pass TRUE to group by year, FALSE for a single chronological list ddddddd
+# Pass TRUE to group by year, FALSE for a single chronological list
 cat(generate_publication_list_from_file(doi_file_path = doi_file, group_by_year = TRUE))
 ```
 

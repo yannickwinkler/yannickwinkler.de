@@ -86,26 +86,21 @@ background: #00000000;
 </style>
 <style>
 #title-block-header.quarto-title-block.default .quarto-title-meta {
-  color: rgba(255, 255, 255, 0.8);
+  color: #000000;
 }
 
-
 #title-block-header {
-  background:
-    /* top, transparent black overlay */
-    linear-gradient(
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-    ),
-    /* bottom, image */
-    url(./img/nn_wanderer.png);
+  position: relative;
+  height: 300px;
+}
+
+#title-block-header::before {
+  background-image: url(./img/nn_wanderer.png);
   background-size: cover;
   background-position-y: center;
   height: 250px;
   opacity: 0.8;
   z-index: -1; /* Keep behind potential future elements if needed */
-
-  /* Ensure the block still takes up space */
   display: block;
   padding: 0;
   margin: 0;

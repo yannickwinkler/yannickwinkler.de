@@ -41,7 +41,7 @@ My latest work explores LLMs for generating experimental stimuli. You can find d
 
 I'm currently working on **obsidianchatR**, a way to chat with my obsidian notes.
 
-[<i class="bi bi-github"></i> Project Repository](link-to-project-repo){.btn .btn-sm .btn-outline-secondary}
+[<i class="bi bi-github"></i> Project Repository](https://github.com/yannickwinkler/obsidianchatR){.btn .btn-sm .btn-outline-secondary}
 :::
 
 ::: {.g-col-12 .g-col-md-4}

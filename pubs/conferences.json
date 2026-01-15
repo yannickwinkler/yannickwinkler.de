@@ -1,4 +1,13 @@
 [
+    {
+    "year": 2025,
+    "authors": "Winkler, Y., Jost, P., Fecher, H.",
+    "title": "Not All Modalities Are Equal: Assessing the Impact of Text, Audio, and Visual Inputs on LLM Classification of Political Videos",
+    "conference": "CCR-Day 2025",
+    "location": "Stuttgart, Germany",
+    "slides_url": "",
+    "type": "conference"
+  },
   {
     "year": 2024,
     "authors": "Winkler, Y., Jost, P., Jürgens, P., Schwager, N.",

@@ -38,15 +38,6 @@
   {
     "year": 2023,
     "authors": "Winkler, Y., Wurst, A.-K. & Bachl, M.",
-    "title": "No manual annotation required? Exploring dictionary, string matching, and machine learning methods for negative campaigning detection",
-    "conference": "Annual Conference of the Methods Division of the German Communication Association (DGPuK)",
-    "location": "Potsdam, Germany",
-    "slides_url": "",
-    "type": "conference"
-  },
-  {
-    "year": 2023,
-    "authors": "Winkler, Y., Wurst, A.-K. & Bachl, M.",
     "title": "New off-the-shelf methods: Assessing pre-trained transformers for negative campaigning detection",
     "conference": "ECPR General Conference",
     "location": "Prague, Czech Republic",

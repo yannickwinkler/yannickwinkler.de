@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Hero banner title block.
+   Only loaded by pages that want the image header (index.qmd, research.qmd)
+   via `css: [style.css, hero.css]` — NOT site-wide.
+   Those pages also use the title-block.html template partial.
+   ========================================================================== */
+
+#title-block-header.quarto-title-block.default .quarto-title-meta {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#title-block-header {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(./img/nn_wanderer.png);
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+/* Keep the header visible even when the partial renders no content */
+#title-block-header:empty {
+  min-height: 250px;
+}
+
+/* The template partial produces a second, duplicate header without the
+   quarto-title-block class — hide it */
+#title-block-header:not(.quarto-title-block) {
+  display: none !important;
+}

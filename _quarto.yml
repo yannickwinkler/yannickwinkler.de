@@ -1,25 +1,59 @@
 project:
   type: website
+  render:
+    - "*.qmd"
+    - "posts/**/*.qmd"
+    - "!index_preview.qmd"
 
 website:
   title: "Yannick Winkler"
+  site-url: https://yannickwinkler.de
+  description: "Computational communication science, political communication, and machine learning."
+  favicon: img/yw_ghibli.png
+  open-graph: true
   navbar:
     left:
       - href: index.qmd
         text: Home
       - href: research.qmd
         text: Research
+      - href: blog.qmd
+        text: Blog
       - href: about.qmd
         text: About
-
+    right:
+      - icon: github
+        href: https://github.com/yannickwinkler
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://linkedin.com/in/yannickwinkler
+        aria-label: LinkedIn
+      - icon: envelope-fill
+        href: "mailto:yannickwinkler@uni-mainz.de"
+        aria-label: E-Mail
+  page-footer:
+    left: "© 2026 Yannick Winkler"
+    center:
+      - text: Impressum
+        href: impressum.qmd
+      - text: Datenschutz
+        href: datenschutz.qmd
+    right:
+      - icon: github
+        href: https://github.com/yannickwinkler
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://linkedin.com/in/yannickwinkler
+        aria-label: LinkedIn
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: [cosmo, theme.scss]
+      dark: [darkly, theme.scss]
+    css: style.css
     toc: true
+    smooth-scroll: true
 
 execute:
   freeze: auto
-
-
-

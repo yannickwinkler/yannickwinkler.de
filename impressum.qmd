@@ -1,0 +1,51 @@
+---
+title: "Impressum"
+toc: false
+---
+
+## Angaben gemäß § 5 DDG
+
+Yannick Winkler\
+[Straße und Hausnummer]{.text-danger}\
+[PLZ Ort]{.text-danger}\
+Deutschland
+
+<!-- TODO: Bitte die ladungsfähige Anschrift eintragen (Pflichtangabe!).
+     Ein Postfach genügt nicht. Alternativ kann bei rein dienstlichem Bezug
+     die Dienstadresse (Institut für Publizistik, JGU Mainz) verwendet werden. -->
+
+**Kontakt**\
+E-Mail: [yannickwinkler@uni-mainz.de](mailto:yannickwinkler@uni-mainz.de)
+
+## Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
+
+Yannick Winkler\
+Anschrift wie oben
+
+## Haftung für Inhalte
+
+Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die
+Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine
+Gewähr übernommen werden. Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG
+für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
+verantwortlich. Nach §§ 8 bis 10 DDG bin ich als Diensteanbieter jedoch nicht
+verpflichtet, übermittelte oder gespeicherte fremde Informationen zu
+überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige
+Tätigkeit hinweisen.
+
+## Haftung für Links
+
+Dieses Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte
+ich keinen Einfluss habe. Deshalb kann für diese fremden Inhalte auch keine
+Gewähr übernommen werden. Für die Inhalte der verlinkten Seiten ist stets der
+jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten
+Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße
+überprüft; rechtswidrige Inhalte waren zu diesem Zeitpunkt nicht erkennbar.
+
+## Urheberrecht
+
+Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten
+unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung,
+Verbreitung und jede Art der Verwertung außerhalb der Grenzen des
+Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors
+bzw. Erstellers.

@@ -9,3 +9,13 @@ docs/
 /.quarto/
 .DS_Store
 notes.txt
+notes_roast_avatar.md
+index_preview.qmd
+index.ipynb
+**/*.quarto_ipynb
+
+# local blog drafts (move a folder up to posts/ to publish)
+posts/_drafts/
+
+# plugin state
+.omc/

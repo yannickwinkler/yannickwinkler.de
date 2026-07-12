@@ -11,32 +11,35 @@ format:
     template-partials:
       - title-block.html # Use the custom title block partial
     toc: false 
+listing:
+  - id: latest-post
+    contents: "posts"
+    sort: "date desc"
+    template: ejs/get_most_recent.ejs
+    fields: [title, date, description]
 ---
-<!--  ::: {.column-page} -->
-<!-- Use column-page for better control over content width on wider screens -->
-
-<b> Welcome! </b>
+**Welcome!**
 
 I am a Research Associate at the Computational Communication Research Group, Department of Communication, Johannes Gutenberg University Mainz. My research focuses on political communication across social media platforms, employing advanced quantitative methods with an emphasis on machine learning techniques and large language models (LLMs).
 
 This website serves as a central place for my academic, professional, and personal activities. If you want to know more about me, head over to the [about page](about.qmd).
 
------------- <!-- A horizontal rule for separation -->
+---
 
 
 ::: {.grid .custom-grid}
 <!-- Using a grid for featured content -->
 
-::: {.g-col-12 .g-col-md-4}
+::: {.g-col-12 .g-col-md-3}
 ### <i class="bi bi-journal-text"></i> Recent Research <!-- Using Bootstrap icons -->
 
-My latest work explores LLMs for generating experimental stimuli. You can find details on this and other publications here:
+You can find details on my current work and other research here:
 
 [<i class="bi bi-arrow-right-short"></i> View Publications](research.qmd){.btn .btn-sm .btn-outline-primary}
 :::
 
 
-::: {.g-col-12 .g-col-md-4}
+::: {.g-col-12 .g-col-md-3}
 ### <i class="bi bi-display"></i> Featured Project
 
 I'm currently working on **obsidianchatR**, a way to chat with my obsidian notes.
@@ -44,13 +47,22 @@ I'm currently working on **obsidianchatR**, a way to chat with my obsidian notes
 [<i class="bi bi-github"></i> Project Repository](https://github.com/yannickwinkler/obsidianchatR){.btn .btn-sm .btn-outline-secondary}
 :::
 
-::: {.g-col-12 .g-col-md-4}
+::: {.g-col-12 .g-col-md-3}
 ### <i class="bi bi-easel2"></i> Current Teaching
 
 This Sommersemester, I am teaching **Datenanalyse mit R**. The course is designed as an inverted classroom. The course website can be found [here](https://stats.ifp.uni-mainz.de/ba-datenanalyse/).
 
 :::
 
+::: {.g-col-12 .g-col-md-3}
+### <i class="bi bi-pencil-square"></i> Blog
+
+Check out my latest thoughts and updates:
+
+::: {#latest-post}
+:::
+
+:::
 
 :::
 

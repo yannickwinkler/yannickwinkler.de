@@ -1,0 +1,8 @@
+<!--  from  https://robertmitchellv.com/blog/2022-08-building-with-quarto/building-with-quarto.html#ejs -->
+<% if (items.length === 0) { %>
+  <p><em>Coming soon…</em></p>
+<% } %>
+<% for (const item of items.slice(0, 1)) { %>
+  <p><a href="<%- item.path %>"><%= item.title %></a></p>
+  <small> <%= item.date %></small>
+<% } %>

@@ -1,0 +1,20 @@
+/*-- scss:defaults --*/
+
+// Do not hotlink Google Fonts (GDPR / LG München I, 3 O 17493/20).
+// Bootswatch themes only @import fonts if $web-font-path is truthy.
+$web-font-path: false;
+
+// Fast, GDPR-clean system font stack
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+$border-radius: 0.5rem;
+$btn-border-radius: 0.5rem;
+
+/*-- scss:rules --*/
+
+// Slightly tighter, more modern headings
+h1, h2, h3, h4 {
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}

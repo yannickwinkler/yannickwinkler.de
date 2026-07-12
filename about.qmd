@@ -21,17 +21,7 @@ about:
     #   text: CV
     #   href: "path/to/your_cv.pdf"
 
-title-block-banner: "#00000000"
-title-block-banner-color: "rgba(255, 255, 255, 0.9)"
-
 toc: false
-
-format:
-  html:
-    css: style.css 
-    template-partials:
-      - title-block.html # Use the custom title block partial
-    toc: false 
 ---
 
 <!-- <h3> Yannick Winkler <h3>

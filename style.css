@@ -1,32 +1,5 @@
-/* ==========================================================================
-   Hero banner (custom title block, used on Home / Research / About)
-   ========================================================================== */
-
-#title-block-header.quarto-title-block.default .quarto-title-meta {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-#title-block-header {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(./img/nn_wanderer.png);
-  background-size: cover;
-  background-position: center;
-  height: 250px;
-  display: block;
-  padding: 0;
-  margin: 0;
-}
-
-/* Keep the header visible even when the partial renders no content */
-#title-block-header:empty {
-  min-height: 250px;
-}
-
-/* Hide title block headers without the quarto-title-block class */
-#title-block-header:not(.quarto-title-block) {
-  display: none !important;
-}
+/* Hero banner styles live in hero.css, loaded only by pages that use the
+   image header (index.qmd, research.qmd). */
 
 /* ==========================================================================
    Home page: featured-content grid as cards

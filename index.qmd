@@ -7,10 +7,10 @@ title-block-banner: "#00000000"
 title-block-banner-color: "rgba(255, 255, 255, 0.9)"
 format:
   html:
-    css: style.css  
+    css: [style.css, hero.css]
     template-partials:
       - title-block.html # Use the custom title block partial
-    toc: false 
+    toc: false
 listing:
   - id: latest-post
     contents: "posts"

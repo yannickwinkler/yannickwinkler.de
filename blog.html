@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Home – Yannick Winkler</title>
+<title>Blog – Yannick Winkler</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -40,6 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
@@ -79,20 +80,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-latest-post .list');
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-date','listing-description',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-latest-post'] = new List('listing-latest-post', options);
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -106,23 +107,6 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
-<style>
-
-      .quarto-title-block .quarto-title-banner h1,
-      .quarto-title-block .quarto-title-banner h2,
-      .quarto-title-block .quarto-title-banner h3,
-      .quarto-title-block .quarto-title-banner h4,
-      .quarto-title-block .quarto-title-banner h5,
-      .quarto-title-block .quarto-title-banner h6
-      {
-        color: rgba(255, 255, 255, 0.9);
-      }
-
-      .quarto-title-block .quarto-title-banner {
-        color: rgba(255, 255, 255, 0.9);
-background: #00000000;
-      }
-</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -155,12 +139,11 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="style.css">
-<meta property="og:title" content="Home – Yannick Winkler">
-<meta property="og:description" content="Computational communication science, political communication, and machine learning.">
+<meta property="og:title" content="Blog – Yannick Winkler">
 <meta property="og:site_name" content="Yannick Winkler">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -340,7 +323,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -348,7 +331,7 @@ window.Quarto = {
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link active" href="./blog.html" aria-current="page"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -381,55 +364,46 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Blog</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
 <!-- main -->
-<div class="quarto-about-jolla">
- <main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
-<header id="title-block-header">
-  <!-- <h1 class="title">Home</h1> --> <!-- Title rendering removed -->
-    </header>
-<p><strong>Welcome!</strong></p>
-<p>I am a Research Associate at the Computational Communication Research Group, Department of Communication, Johannes Gutenberg University Mainz. My research focuses on political communication across social media platforms, employing advanced quantitative methods with an emphasis on machine learning techniques and large language models (LLMs).</p>
-<p>This website serves as a central place for my academic, professional, and personal activities. If you want to know more about me, head over to the <a href="./about.html">about page</a>.</p>
-<hr>
-<div class="grid custom-grid">
-<!-- Using a grid for featured content -->
-<section id="recent-research" class="level3 g-col-12 g-col-md-3">
-<h3 data-anchor-id="recent-research"><i class="bi bi-journal-text"></i> Recent Research <!-- Using Bootstrap icons --></h3>
-<p>You can find details on my current work and other research here:</p>
-<p><a href="./research.html" class="btn btn-sm btn-outline-primary"><i class="bi bi-arrow-right-short"></i> View Publications</a></p>
-</section>
-<section id="featured-project" class="level3 g-col-12 g-col-md-3">
-<h3 data-anchor-id="featured-project"><i class="bi bi-display"></i> Featured Project</h3>
-<p>I’m currently working on <strong>obsidianchatR</strong>, a way to chat with my obsidian notes.</p>
-<p><a href="https://github.com/yannickwinkler/obsidianchatR" class="btn btn-sm btn-outline-secondary"><i class="bi bi-github"></i> Project Repository</a></p>
-</section>
-<section id="current-teaching" class="level3 g-col-12 g-col-md-3">
-<h3 data-anchor-id="current-teaching"><i class="bi bi-easel2"></i> Current Teaching</h3>
-<p>This Sommersemester, I am teaching <strong>Datenanalyse mit R</strong>. The course is designed as an inverted classroom. The course website can be found <a href="https://stats.ifp.uni-mainz.de/ba-datenanalyse/">here</a>.</p>
-</section>
-<section id="blog" class="level3 g-col-12 g-col-md-3">
-<h3 data-anchor-id="blog"><i class="bi bi-pencil-square"></i> Blog</h3>
-<p>Check out my latest thoughts and updates:</p>
-<div id="listing-latest-post" class="quarto-listing quarto-listing-container-custom">
-<!--  from  https://robertmitchellv.com/blog/2022-08-building-with-quarto/building-with-quarto.html#ejs -->
-<p>
-<em>Coming soon…</em>
-</p>
+
+
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+
+</div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-</div>
-<!-- ::: -->
-
-
-</main>  
-</div>
- <!-- /main -->
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -445,6 +419,13 @@ window.Quarto = {
       window.document.body.appendChild(a);
     }
     setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

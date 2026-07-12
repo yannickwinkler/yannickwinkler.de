@@ -1,26 +1,5 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Yannick Winkler",
-    "section": "",
-    "text": "I’m a research associate specializing in Computational Communication Science, with a career that bridges political science, hands-on political work, and empirical research.\nBefore moving to academia, I held a series of roles in German politics over a period of four years: beginning as a personal aide to a state parliamentarian, then serving as an assistant in a Member of the Bundestag’s constituency office, and ultimately stepping up to lead that office as its head. In these positions, I drafted press releases and briefing notes, managed schedules, organized events, and supervised a small team to keep daily operations running smoothly. Alongside this practical experience, I completed a B.A. in Political Science at the University of Freiburg and an M.A. in Political Science at the University of Mannheim, where I specialized in Advanced Quantitative Methods.\nMy research approach combines quantitative methods with a keen interest in how political communication unfolds in digital spaces. I currently focus on the applications of LLMs for text and video classification of political content. As a member of the “Multilevel Flows of Political Communication on Facebook” project, I also studied user behavior on political Facebook pages.\nIn my free time, I enjoy following daily political developments through podcasts, newspapers, and other news outlets, lifting weights, and—most of all—spending time with my family. I’ll occasionally add a bottle of Single Malt Scotch to my collection."
-  },
-  {
-    "objectID": "about.html#experience",
-    "href": "about.html#experience",
-    "title": "Yannick Winkler",
-    "section": "Experience",
-    "text": "Experience\nResearch Associate  University of Mainz | October 2022 - present\nResearch Associate  University of Hohenheim | December 2020 - September 2023\nConstituency Office Manager  Emmendingen | July 2019 - November 2020"
-  },
-  {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "Yannick Winkler",
-    "section": "Education",
-    "text": "Education\nUniversity of Mannheim  M.A. in Political Science | Sept 2011 - June 2015\nUniversity of Freiburg B.A. in Political Science (Minor: Islamic Studies) | Sept 2007 - June 2011"
-  },
-  {
     "objectID": "research.html",
     "href": "research.html",
     "title": "Yannick Winkler",
@@ -49,10 +28,122 @@
     "text": "Invited Talks\n2023\n\nScharkow, M., Winkler, Y. (2023). KI für automatische Text- und Bildanalysen. Symposium Künstliche Intelligenz an der JGU, Mainz, Germany"
   },
   {
+    "objectID": "impressum.html",
+    "href": "impressum.html",
+    "title": "Impressum",
+    "section": "",
+    "text": "Yannick Winkler\nStraße und Hausnummer\nPLZ Ort\nDeutschland\n\nKontakt\nE-Mail: yannickwinkler@uni-mainz.de"
+  },
+  {
+    "objectID": "impressum.html#angaben-gemäß-5-ddg",
+    "href": "impressum.html#angaben-gemäß-5-ddg",
+    "title": "Impressum",
+    "section": "",
+    "text": "Yannick Winkler\nStraße und Hausnummer\nPLZ Ort\nDeutschland\n\nKontakt\nE-Mail: yannickwinkler@uni-mainz.de"
+  },
+  {
+    "objectID": "impressum.html#verantwortlich-für-den-inhalt-nach-18-abs.-2-mstv",
+    "href": "impressum.html#verantwortlich-für-den-inhalt-nach-18-abs.-2-mstv",
+    "title": "Impressum",
+    "section": "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
+    "text": "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV\nYannick Winkler\nAnschrift wie oben"
+  },
+  {
+    "objectID": "impressum.html#haftung-für-inhalte",
+    "href": "impressum.html#haftung-für-inhalte",
+    "title": "Impressum",
+    "section": "Haftung für Inhalte",
+    "text": "Haftung für Inhalte\nDie Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen."
+  },
+  {
+    "objectID": "impressum.html#haftung-für-links",
+    "href": "impressum.html#haftung-für-links",
+    "title": "Impressum",
+    "section": "Haftung für Links",
+    "text": "Haftung für Links\nDieses Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann für diese fremden Inhalte auch keine Gewähr übernommen werden. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft; rechtswidrige Inhalte waren zu diesem Zeitpunkt nicht erkennbar."
+  },
+  {
+    "objectID": "impressum.html#urheberrecht",
+    "href": "impressum.html#urheberrecht",
+    "title": "Impressum",
+    "section": "Urheberrecht",
+    "text": "Urheberrecht\nDie durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Yannick Winkler",
+    "section": "",
+    "text": "I’m a research associate specializing in Computational Communication Science, with a career that bridges political science, hands-on political work, and empirical research.\nBefore moving to academia, I held a series of roles in German politics over a period of four years: beginning as a personal aide to a state parliamentarian, then serving as an assistant in a Member of the Bundestag’s constituency office, and ultimately stepping up to lead that office as its head. In these positions, I drafted press releases and briefing notes, managed schedules, organized events, and supervised a small team to keep daily operations running smoothly. Alongside this practical experience, I completed a B.A. in Political Science at the University of Freiburg and an M.A. in Political Science at the University of Mannheim, where I specialized in Advanced Quantitative Methods.\nMy research approach combines quantitative methods with a keen interest in how political communication unfolds in digital spaces. I currently focus on the applications of LLMs for text and video classification of political content. As a member of the “Multilevel Flows of Political Communication on Facebook” project, I also studied user behavior on political Facebook pages.\nIn my free time, I enjoy following daily political developments through podcasts, newspapers, and other news outlets, lifting weights, and—most of all—spending time with my family. I’ll occasionally add a bottle of Single Malt Scotch to my collection."
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "Yannick Winkler",
+    "section": "Experience",
+    "text": "Experience\nResearch Associate  University of Mainz | October 2022 - present\nResearch Associate  University of Hohenheim | December 2020 - September 2023\nConstituency Office Manager  Emmendingen | July 2019 - November 2020"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Yannick Winkler",
+    "section": "Education",
+    "text": "Education\nUniversity of Mannheim  M.A. in Political Science | Sept 2011 - June 2015\nUniversity of Freiburg B.A. in Political Science (Minor: Islamic Studies) | Sept 2007 - June 2011"
+  },
+  {
+    "objectID": "datenschutz.html",
+    "href": "datenschutz.html",
+    "title": "Datenschutzerklärung",
+    "section": "",
+    "text": "Yannick Winkler\nStraße und Hausnummer\nPLZ Ort\nE-Mail: yannickwinkler@uni-mainz.de"
+  },
+  {
+    "objectID": "datenschutz.html#verantwortlicher",
+    "href": "datenschutz.html#verantwortlicher",
+    "title": "Datenschutzerklärung",
+    "section": "",
+    "text": "Yannick Winkler\nStraße und Hausnummer\nPLZ Ort\nE-Mail: yannickwinkler@uni-mainz.de"
+  },
+  {
+    "objectID": "datenschutz.html#allgemeines",
+    "href": "datenschutz.html#allgemeines",
+    "title": "Datenschutzerklärung",
+    "section": "Allgemeines",
+    "text": "Allgemeines\nDiese Website ist ein rein informatives Angebot. Es werden keine Cookies gesetzt, keine Analyse- oder Tracking-Dienste eingesetzt und keine personenbezogenen Daten durch mich aktiv erhoben oder verarbeitet. Es werden keine externen Schriftarten (z. B. Google Fonts) von Drittservern geladen."
+  },
+  {
+    "objectID": "datenschutz.html#hosting-github-pages",
+    "href": "datenschutz.html#hosting-github-pages",
+    "title": "Datenschutzerklärung",
+    "section": "Hosting (GitHub Pages)",
+    "text": "Hosting (GitHub Pages)\nDiese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. Beim Aufruf der Website verarbeitet GitHub technisch notwendige Daten (insbesondere die IP-Adresse des aufrufenden Geräts, Datum und Uhrzeit des Zugriffs, Browsertyp und Betriebssystem) in sogenannten Server-Logfiles. Diese Verarbeitung ist für die Bereitstellung und Sicherheit der Website technisch erforderlich.\nRechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der sicheren und effizienten Bereitstellung dieses Informationsangebots). GitHub ist unter dem EU-US Data Privacy Framework zertifiziert. Weitere Informationen finden sich in der Datenschutzerklärung von GitHub: https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
+  },
+  {
+    "objectID": "datenschutz.html#kontaktaufnahme",
+    "href": "datenschutz.html#kontaktaufnahme",
+    "title": "Datenschutzerklärung",
+    "section": "Kontaktaufnahme",
+    "text": "Kontaktaufnahme\nBei einer Kontaktaufnahme per E-Mail werden die übermittelten Daten (E-Mail- Adresse, Inhalt der Nachricht) ausschließlich zur Bearbeitung der Anfrage verwendet (Art. 6 Abs. 1 lit. f DSGVO) und gelöscht, sobald sie für diesen Zweck nicht mehr erforderlich sind."
+  },
+  {
+    "objectID": "datenschutz.html#ihre-rechte",
+    "href": "datenschutz.html#ihre-rechte",
+    "title": "Datenschutzerklärung",
+    "section": "Ihre Rechte",
+    "text": "Ihre Rechte\nSie haben gegenüber dem Verantwortlichen das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO), Datenübertragbarkeit (Art. 20 DSGVO) sowie Widerspruch gegen die Verarbeitung (Art. 21 DSGVO). Außerdem besteht ein Beschwerderecht bei einer Datenschutzaufsichtsbehörde, z. B. beim Landesbeauftragten für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Yannick Winkler",
     "section": "",
-    "text": "Welcome! \nI am a Research Associate at the Computational Communication Research Group, Department of Communication, Johannes Gutenberg University Mainz. My research focuses on political communication across social media platforms, employing advanced quantitative methods with an emphasis on machine learning techniques and large language models (LLMs).\nThis website serves as a central place for my academic, professional, and personal activities. If you want to know more about me, head over to the about page.\n———— \n\n\n\n Recent Research \nMy latest work explores LLMs for generating experimental stimuli. You can find details on this and other publications here:\n View Publications\n\n\n Featured Project\nI’m currently working on obsidianchatR, a way to chat with my obsidian notes.\n Project Repository\n\n\n Current Teaching\nThis Sommersemester, I am teaching Datenanalyse mit R. The course is designed as an inverted classroom. The course website can be found here."
+    "text": "Welcome!\nI am a Research Associate at the Computational Communication Research Group, Department of Communication, Johannes Gutenberg University Mainz. My research focuses on political communication across social media platforms, employing advanced quantitative methods with an emphasis on machine learning techniques and large language models (LLMs).\nThis website serves as a central place for my academic, professional, and personal activities. If you want to know more about me, head over to the about page.\n\n\n\n\n Recent Research \nYou can find details on my current work and other research here:\n View Publications\n\n\n Featured Project\nI’m currently working on obsidianchatR, a way to chat with my obsidian notes.\n Project Repository\n\n\n Current Teaching\nThis Sommersemester, I am teaching Datenanalyse mit R. The course is designed as an inverted classroom. The course website can be found here.\n\n\n Blog\nCheck out my latest thoughts and updates:\n\n\n\nComing soon…\n\nNo matching items"
   }
 ]

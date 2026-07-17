@@ -6,13 +6,9 @@ toc: false
 ## Angaben gemäß § 5 DDG
 
 Yannick Winkler\
-[Straße und Hausnummer]{.text-danger}\
-[PLZ Ort]{.text-danger}\
-Deutschland
-
-<!-- TODO: Bitte die ladungsfähige Anschrift eintragen (Pflichtangabe!).
-     Ein Postfach genügt nicht. Alternativ kann bei rein dienstlichem Bezug
-     die Dienstadresse (Institut für Publizistik, JGU Mainz) verwendet werden. -->
+Institut für Publizistik{.text-danger}\
+Jakob-Welder-Weg 12 {.text-danger}\
+55128 Mainz  {.text-danger}\
 
 **Kontakt**\
 E-Mail: [yannickwinkler@uni-mainz.de](mailto:yannickwinkler@uni-mainz.de)

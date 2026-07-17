@@ -6,9 +6,9 @@ toc: false
 ## Angaben gemäß § 5 DDG
 
 Yannick Winkler\
-Institut für Publizistik{.text-danger}\
-Jakob-Welder-Weg 12 {.text-danger}\
-55128 Mainz  {.text-danger}\
+Institut für Publizistik
+Jakob-Welder-Weg 12
+55128 Mainz
 
 **Kontakt**\
 E-Mail: [yannickwinkler@uni-mainz.de](mailto:yannickwinkler@uni-mainz.de)

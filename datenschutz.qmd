@@ -6,9 +6,9 @@ toc: true
 ## Verantwortlicher
 
 Yannick Winkler\
-Institut für Publizistik
-Jakob-Welder-Weg 12 
-55128 Mainz
+Institut für Publizistik\
+Jakob-Welder-Weg 12 \
+55128 Mainz\
 E-Mail: [yannickwinkler@uni-mainz.de](mailto:yannickwinkler@uni-mainz.de)
 
 ## Allgemeines

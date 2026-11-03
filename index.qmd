@@ -26,7 +26,7 @@ I am a Research Associate at the Computational Communication Research Group, Dep
 This website serves as a central place for my academic, professional, and personal activities. If you want to know more about me, head over to the [about page](about.qmd).
 :::
 
-::: {.bento-tile .bento-research}
+::: {.bento-tile .bento-research .network-bg}
 [<i class="bi bi-journal-text"></i> Research]{.bento-label}
 
 Publications, conference presentations and invited talks.

@@ -20,7 +20,7 @@ h1, h2, h3, h4 {
 }
 
 // Bento tile tokens, computed per theme (light = cosmo, dark = darkly)
-.bento {
+.bento, .research-hero {
   --tile-bg: #{mix($body-color, $body-bg, 4%)};
   --tile-bg-strong: #{$body-bg};
   --tile-border: #{rgba($body-color, 0.1)};

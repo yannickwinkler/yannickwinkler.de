@@ -64,16 +64,16 @@ for i, j in edges:
 
 # The wanderer's path: greedy walk through the upper band (text sits below),
 # from the middle towards the right edge
-PATH_Y = 0.2 * H
+PATH_Y = 0.17 * H
 start = min(
     (i for i, (x, _) in enumerate(nodes) if 0.48 * W < x < 0.58 * W),
-    key=lambda i: abs(nodes[i][1] - 0.32 * H),
+    key=lambda i: abs(nodes[i][1] - 0.22 * H),
 )
 path = [start]
-while nodes[path[-1]][0] < W - 140:
+while nodes[path[-1]][0] < W - 260:
     options = [
         j for j in adj[path[-1]]
-        if j not in path and nodes[j][0] > nodes[path[-1]][0] and nodes[j][1] < 0.42 * H
+        if j not in path and nodes[j][0] > nodes[path[-1]][0] and nodes[j][1] < 0.3 * H
     ]
     if not options:
         break

@@ -1,12 +1,12 @@
 ---
 title: "Yannick Winkler"
 #subtitle: "Researcher | Politics Decoder | Former Constituency Office Manager"
-image: "img/yw_ghibli.png" # Your photo, shown nicely in title block
-image-title: "A Ghibli version of myself"
+image: "img/yw_dither_light_240.png" # dark-mode version swapped in via style.css
+image-title: "A dithered portrait of myself"
 about:
   template: jolla
   image-shape: round
-  image-width: 15em
+  image-width: 240px
   links: 
     - icon: envelope-fill
       text: Email

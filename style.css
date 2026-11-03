@@ -178,5 +178,5 @@
   display: none;
 }
 
-/* Home page: the name is in the intro tile, so drop it from the navbar */
-body:has(.bento) .navbar-brand-container { display: none; }
+/* No site name in the navbar (it stays in the browser tab title) */
+.navbar-brand-container { display: none; }

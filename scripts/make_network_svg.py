@@ -62,17 +62,22 @@ for i, j in edges:
     adj[i].append(j)
     adj[j].append(i)
 
-# The wanderer's path: greedy walk from the left-centre towards the right edge
+# The wanderer's path: greedy walk through the upper band (text sits below),
+# from the middle towards the right edge
+PATH_Y = 0.2 * H
 start = min(
-    (i for i, (x, _) in enumerate(nodes) if 0.35 * W < x < 0.5 * W),
-    key=lambda i: abs(nodes[i][1] - H * 0.62),
+    (i for i, (x, _) in enumerate(nodes) if 0.48 * W < x < 0.58 * W),
+    key=lambda i: abs(nodes[i][1] - 0.32 * H),
 )
 path = [start]
-while nodes[path[-1]][0] < W - 120:
-    options = [j for j in adj[path[-1]] if j not in path and nodes[j][0] > nodes[path[-1]][0]]
+while nodes[path[-1]][0] < W - 140:
+    options = [
+        j for j in adj[path[-1]]
+        if j not in path and nodes[j][0] > nodes[path[-1]][0] and nodes[j][1] < 0.42 * H
+    ]
     if not options:
         break
-    path.append(max(options, key=lambda j: nodes[j][0] - 0.6 * abs(nodes[j][1] - H * 0.45)))
+    path.append(max(options, key=lambda j: nodes[j][0] - 0.8 * abs(nodes[j][1] - PATH_Y)))
 
 
 def svg(body):

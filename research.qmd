@@ -6,7 +6,6 @@ format:
 ---
 
 ::: {.research-hero .network-bg}
-[Fig. 1 — A path through the network]{.hero-caption .hero-caption-left}
 [49.99° N · 8.24° E · Mainz]{.hero-caption .hero-caption-right}
 
 <h1 class="research-title">Research</h1>

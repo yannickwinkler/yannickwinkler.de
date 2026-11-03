@@ -15,7 +15,10 @@ listing:
 ::: {.bento}
 
 ::: {.bento-tile .bento-intro}
-![](img/yw_avatar.jpg){.bento-avatar fig-alt="Ghibli-style portrait of Yannick Winkler"}
+<div class="bento-avatar dither-avatar">
+<img src="img/yw_dither_light.png" class="dither-light" width="160" height="160" alt="Dithered portrait of Yannick Winkler">
+<img src="img/yw_dither_dark.png" class="dither-dark" width="160" height="160" alt="" aria-hidden="true">
+</div>
 
 <h1 class="bento-name">Yannick Winkler</h1>
 

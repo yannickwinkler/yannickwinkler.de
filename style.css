@@ -66,14 +66,25 @@
 .bento-intro p + p { margin-top: 0.75rem; }
 
 .bento-avatar {
-  width: 6.5rem;
-  height: 6.5rem;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 0.75rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
   outline: 1px solid var(--tile-border-strong);
-  outline-offset: 4px;
+  outline-offset: 5px;
 }
+
+/* 1-bit dithered portrait (scripts/make_dither_avatar.py), one per theme */
+.dither-avatar img {
+  display: block;
+  width: 160px;
+  height: 160px;
+  image-rendering: pixelated;
+}
+.dither-avatar .dither-dark { display: none; }
+body.quarto-dark .dither-avatar .dither-light { display: none; }
+body.quarto-dark .dither-avatar .dither-dark { display: block; }
 
 /* The avatar is wrapped in a <p> or <figure> by Pandoc */
 .bento-intro figure, .bento-intro .quarto-figure { margin: 0; }
@@ -202,14 +213,27 @@
   mask: url(img/network.svg) right center / cover no-repeat;
 }
 
+/* Keep text readable: network fades out towards the bottom-left text area */
+.network-bg::before,
+.network-bg::after {
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+.network-bg::before {
+  -webkit-mask: url(img/network.svg) right center / cover no-repeat,
+    linear-gradient(200deg, #000 20%, rgba(0, 0, 0, 0.35) 55%, rgba(0, 0, 0, 0.12) 80%);
+  mask: url(img/network.svg) right center / cover no-repeat,
+    linear-gradient(200deg, #000 20%, rgba(0, 0, 0, 0.35) 55%, rgba(0, 0, 0, 0.12) 80%);
+}
+
 .network-bg::before {
   background: var(--bs-body-color);
   opacity: 0.3;
 }
 
 .network-bg::after {
-  -webkit-mask-image: url(img/network-accent.svg);
-  mask-image: url(img/network-accent.svg);
+  -webkit-mask-image: url(img/network-accent.svg), linear-gradient(#000, #000);
+  mask-image: url(img/network-accent.svg), linear-gradient(#000, #000);
   background: var(--bs-primary);
   opacity: 0.9;
 }
@@ -224,8 +248,8 @@
 
 .research-hero {
   margin: 1.5rem 0 2.5rem;
-  padding: 4rem 2rem 2rem;
-  min-height: 16rem;
+  padding: 9rem 2rem 2rem;
+  min-height: 18rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -241,7 +265,6 @@
   top: 1rem;
   font-size: 0.68rem;
 }
-.hero-caption-left { left: 1.25rem; }
 .hero-caption-right { right: 1.25rem; }
 
 .research-hero .research-title {
@@ -256,13 +279,11 @@
   max-width: 58ch;
   margin: 0;
   line-height: 1.65;
-  /* keep text readable over the graphic */
-  text-shadow: 0 0 12px var(--tile-bg), 0 0 4px var(--tile-bg), 0 0 2px var(--tile-bg);
 }
 
 @media (max-width: 767.98px) {
   .research-hero { padding: 3.5rem 1.25rem 1.5rem; }
-  .hero-caption-right { display: none; }
+  .hero-caption-right { right: auto; left: 1.25rem; }
 }
 
 /* ==========================================================================

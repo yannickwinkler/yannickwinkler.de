@@ -27,7 +27,7 @@ This website serves as a central place for my academic, professional, and person
 :::
 
 ::: {.bento-tile .bento-research .network-bg}
-[<i class="bi bi-journal-text"></i> Research]{.bento-label}
+[Research]{.bento-label}
 
 Publications, conference presentations and invited talks.
 
@@ -35,7 +35,7 @@ Publications, conference presentations and invited talks.
 :::
 
 ::: {.bento-tile .bento-blog}
-[<i class="bi bi-pencil-square"></i> Blog]{.bento-label}
+[Blog]{.bento-label}
 
 Latest post:
 
@@ -46,7 +46,7 @@ Latest post:
 :::
 
 ::: {.bento-tile .bento-links}
-[<i class="bi bi-person-lines-fill"></i> Connect]{.bento-label}
+[Connect]{.bento-label}
 
 [<i class="bi bi-github"></i>](https://github.com/yannickwinkler){.bento-icon aria-label="GitHub"}
 [<i class="bi bi-linkedin"></i>](https://linkedin.com/in/yannickwinkler){.bento-icon aria-label="LinkedIn"}
@@ -54,7 +54,7 @@ Latest post:
 :::
 
 ::: {.bento-tile .bento-focus}
-[<i class="bi bi-stars"></i> Focus]{.bento-label}
+[Focus]{.bento-label}
 
 [Computational communication]{.bento-chip}
 [Political communication]{.bento-chip}

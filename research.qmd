@@ -6,6 +6,9 @@ format:
 ---
 
 ::: {.research-hero .network-bg}
+[Fig. 1 — A path through the network]{.hero-caption .hero-caption-left}
+[49.99° N · 8.24° E · Mainz]{.hero-caption .hero-caption-right}
+
 <h1 class="research-title">Research</h1>
 
 My research interests lie primarily in the areas of computational communication science, political communication, and user behavior on social media platforms. Below is a list of my publications, including peer-reviewed journal articles, book chapters, and preprints, as well as conference presentations and invited talks.

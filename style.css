@@ -1,4 +1,16 @@
 /* ==========================================================================
+   Print-tech paper style: warm paper, serif headlines, mono labels, hairlines.
+   Colours come from theme-light.scss / theme-dark.scss; tile tokens
+   (--tile-*) from theme.scss.
+   ========================================================================== */
+
+/* Halftone dot field, used as a subtle texture */
+.dot-field {
+  background-image: radial-gradient(var(--tile-dots) 1px, transparent 1.3px);
+  background-size: 12px 12px;
+}
+
+/* ==========================================================================
    Home page: bento grid
    ========================================================================== */
 
@@ -6,9 +18,10 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-auto-rows: minmax(9rem, auto);
-  gap: 1rem;
+  gap: 0.875rem;
   max-width: 1080px;
   margin: 1.5rem auto 2.5rem;
+  counter-reset: tile;
 }
 
 .bento-tile {
@@ -20,26 +33,36 @@
   color: var(--bs-body-color);
   background: var(--tile-bg);
   border: 1px solid var(--tile-border);
-  border-radius: 1.25rem;
-  box-shadow: 0 1px 2px var(--tile-shadow);
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  border-radius: 0.5rem;
+  transition: border-color 0.18s ease;
 }
 
-.bento-tile:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px var(--tile-shadow);
-}
+.bento-tile:hover { border-color: var(--tile-border-strong); }
 
 .bento-tile p { margin-bottom: 0; }
 
 .bento-intro {
   grid-column: span 2;
   grid-row: span 2;
-  padding: 2rem;
+  padding: 2.25rem;
   background: var(--tile-bg-strong);
+  overflow: hidden;
+  isolation: isolate;
 }
 
-.bento-intro p { max-width: 62ch; line-height: 1.6; }
+/* Halftone corner texture, fading out towards the text */
+.bento-intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(var(--tile-dots) 1px, transparent 1.3px);
+  background-size: 12px 12px;
+  -webkit-mask-image: radial-gradient(ellipse 55% 70% at 100% 0%, #000 10%, transparent 75%);
+  mask-image: radial-gradient(ellipse 55% 70% at 100% 0%, #000 10%, transparent 75%);
+}
+
+.bento-intro p { max-width: 62ch; line-height: 1.65; }
 .bento-intro p + p { margin-top: 0.75rem; }
 
 .bento-avatar {
@@ -47,37 +70,57 @@
   height: 6.5rem;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  outline: 1px solid var(--tile-border-strong);
+  outline-offset: 4px;
 }
 
 /* The avatar is wrapped in a <p> or <figure> by Pandoc */
 .bento-intro figure, .bento-intro .quarto-figure { margin: 0; }
 
 .bento .bento-name {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  margin: 0 0 0.25rem;
   border: 0;
+}
+
+/* Mono labels: role line, tile labels, chips, dates */
+.bento-role,
+.bento-label,
+.bento-chip,
+.bento-blog #listing-latest-post small,
+.hero-caption {
+  font-family: var(--bs-font-monospace);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tile-muted);
 }
 
 .bento-role {
   display: block;
-  color: var(--tile-muted);
-  font-weight: 500;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
-.bento-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--tile-muted);
+.bento-role::before {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.5rem;
+  background: var(--bs-primary);
+  transform: rotate(45deg) translateY(-1px);
+}
+
+/* Numbered tile labels: "01 — Research" */
+.bento-tile:not(.bento-intro) { counter-increment: tile; }
+
+.bento-label::before {
+  content: counter(tile, decimal-leading-zero) " \2014  ";
+  color: var(--bs-primary);
 }
 
 .bento-tile > p:last-child { margin-top: auto; }
@@ -89,6 +132,57 @@
 
 .bento-link .bi { transition: transform 0.18s ease; display: inline-block; }
 .bento-tile:hover .bento-link .bi { transform: translateX(3px); }
+
+.bento-links p { display: flex; gap: 0.6rem; margin-top: auto; }
+
+.bento-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.375rem;
+  font-size: 1.2rem;
+  color: var(--bs-body-color);
+  background: var(--tile-bg-strong);
+  border: 1px solid var(--tile-border);
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.bento-icon:hover {
+  background: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: var(--bs-body-bg);
+}
+
+.bento-focus { grid-column: span 2; }
+.bento-focus p { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; }
+
+.bento-chip {
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.25rem;
+  color: var(--bs-body-color);
+  background: var(--tile-bg-strong);
+  border: 1px solid var(--tile-border);
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+/* Latest-post teaser inside the blog tile */
+.bento-blog #listing-latest-post p {
+  margin: 0;
+  font-family: var(--serif, serif);
+  font-size: 1.15rem;
+}
+.bento-blog #listing-latest-post a { text-decoration: none; }
+
+/* Phones: stack everything */
+@media (max-width: 767.98px) {
+  .bento { grid-template-columns: 1fr; }
+  .bento-intro, .bento-focus { grid-column: auto; grid-row: auto; }
+  .bento-intro { padding: 1.5rem; }
+}
 
 /* ==========================================================================
    Network background (img/network*.svg, made by scripts/make_network_svg.py).
@@ -110,19 +204,19 @@
 
 .network-bg::before {
   background: var(--bs-body-color);
-  opacity: 0.28;
+  opacity: 0.3;
 }
 
 .network-bg::after {
   -webkit-mask-image: url(img/network-accent.svg);
   mask-image: url(img/network-accent.svg);
   background: var(--bs-primary);
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 /* Small tile: keep the graphic in the background */
 .bento-research::before { opacity: 0.16; }
-.bento-research::after { opacity: 0.45; }
+.bento-research::after { opacity: 0.5; }
 
 /* ==========================================================================
    Research page header
@@ -130,20 +224,30 @@
 
 .research-hero {
   margin: 1.5rem 0 2.5rem;
-  padding: 3.5rem 2rem 2rem;
-  min-height: 15rem;
+  padding: 4rem 2rem 2rem;
+  min-height: 16rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: var(--tile-bg);
+  background-color: var(--tile-bg);
+  background-image: radial-gradient(var(--tile-dots) 1px, transparent 1.3px);
+  background-size: 12px 12px;
   border: 1px solid var(--tile-border);
-  border-radius: 1.25rem;
+  border-radius: 0.5rem;
 }
 
+.hero-caption {
+  position: absolute;
+  top: 1rem;
+  font-size: 0.68rem;
+}
+.hero-caption-left { left: 1.25rem; }
+.hero-caption-right { right: 1.25rem; }
+
 .research-hero .research-title {
-  font-size: clamp(2.25rem, 5vw, 3.25rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-size: clamp(2.5rem, 5vw, 3.6rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
   margin: 0 0 0.75rem;
   border: 0;
 }
@@ -151,56 +255,14 @@
 .research-hero p {
   max-width: 58ch;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.65;
   /* keep text readable over the graphic */
-  text-shadow: 0 0 12px var(--tile-bg), 0 0 4px var(--tile-bg);
+  text-shadow: 0 0 12px var(--tile-bg), 0 0 4px var(--tile-bg), 0 0 2px var(--tile-bg);
 }
 
 @media (max-width: 767.98px) {
-  .research-hero { padding: 2.5rem 1.25rem 1.5rem; }
-}
-
-.bento-links { flex-direction: column; }
-.bento-links p { display: flex; gap: 0.75rem; margin-top: auto; }
-
-.bento-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 0.9rem;
-  font-size: 1.25rem;
-  color: var(--bs-body-color);
-  background: var(--tile-bg-strong);
-  border: 1px solid var(--tile-border);
-  text-decoration: none;
-  transition: background 0.15s ease, color 0.15s ease;
-}
-
-.bento-icon:hover { background: var(--bs-primary); color: #fff; }
-
-.bento-focus { grid-column: span 2; }
-.bento-focus p { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; }
-
-.bento-chip {
-  padding: 0.35rem 0.85rem;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  background: var(--tile-bg-strong);
-  border: 1px solid var(--tile-border);
-}
-
-/* Latest-post teaser inside the blog tile */
-.bento-blog #listing-latest-post p { margin: 0; font-weight: 600; }
-.bento-blog #listing-latest-post a { text-decoration: none; }
-.bento-blog #listing-latest-post small { color: var(--tile-muted); }
-
-/* Phones: stack everything */
-@media (max-width: 767.98px) {
-  .bento { grid-template-columns: 1fr; }
-  .bento-intro, .bento-focus { grid-column: auto; grid-row: auto; }
-  .bento-intro { padding: 1.5rem; }
+  .research-hero { padding: 3.5rem 1.25rem 1.5rem; }
+  .hero-caption-right { display: none; }
 }
 
 /* ==========================================================================
@@ -226,11 +288,16 @@
   margin-bottom: 1em;
 }
 
-/* Publication section headings */
+/* Publication section headings as mono labels */
 #publications h3 {
-  margin-top: 1.75rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-family: var(--bs-font-monospace);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bs-primary);
 }
 
 /* Home and research pages draw their own header */

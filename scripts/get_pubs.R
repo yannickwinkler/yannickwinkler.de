@@ -39,37 +39,77 @@ read_dois_from_file <- function(filepath) {
   )
 }
 
-# Fetch metadata (type, titles, volume) from the Crossref API
-fetch_crossref_metadata <- function(doi) {
-  response <- safely(httr::GET)(str_glue("https://api.crossref.org/works/{doi}"))
+# GET with retries: the citation services occasionally return errors
+# (e.g. a spurious 404), which used to drop publications from the list.
+get_with_retry <- function(url, ...) {
+  response <- safely(httr::RETRY)(
+    "GET", url, ...,
+    times = 5, pause_base = 1, pause_cap = 8, quiet = TRUE,
+    terminate_on = c(400, 401, 403)
+  )
+  if (is.null(response$error) && status_code(response$result) == 200) response$result else NULL
+}
 
-  if (!is.null(response$error) || status_code(response$result) != 200) {
+# Fetch metadata (type, titles, volume, authors, year) from the Crossref API
+fetch_crossref_metadata <- function(doi) {
+  response <- get_with_retry(str_glue("https://api.crossref.org/works/{doi}"))
+
+  if (is.null(response)) {
     warning(str_glue("Failed to retrieve Crossref metadata for DOI: {doi}"))
     return(list())
   }
 
-  msg <- jsonlite::fromJSON(content(response$result, as = "text", encoding = "UTF-8"))$message
+  msg <- jsonlite::fromJSON(content(response, as = "text", encoding = "UTF-8"))$message
+  authors <- msg$author
   list(
     type      = msg$type,
     title     = msg$title[1],
     container = msg$`container-title`[1],
-    volume    = msg$volume
+    volume    = msg$volume,
+    year      = msg$issued$`date-parts`[[1]][1],
+    authors   = if (is.data.frame(authors)) {
+      str_c(authors$family, ", ", str_replace_all(authors$given, "(\\p{L})\\p{L}*", "\\1."))
+    } else character(0)
   )
 }
 
-# Fetch an APA 7 citation (plain text) from the DOI citation formatter
+# Minimal APA-like citation from Crossref metadata (last-resort fallback)
+citation_from_metadata <- function(doi, meta) {
+  if (is.null(meta$title)) return(NULL)
+  authors <- meta$authors
+  author_str <- case_when(
+    length(authors) == 0 ~ "",
+    length(authors) == 1 ~ authors[1],
+    TRUE ~ str_c(str_c(head(authors, -1), collapse = ", "), ", & ", tail(authors, 1))
+  )
+  parts <- c(
+    str_glue("{author_str} ({meta$year %||% 'n.d.'})."),
+    str_c(meta$title, "."),
+    if (!is.null(meta$container) && !is.na(meta$container)) str_c(meta$container, ".") else NULL,
+    str_glue("https://doi.org/{doi}")
+  )
+  str_c(parts, collapse = " ")
+}
+
+# Fetch an APA 7 citation (plain text). Tries the DOI citation formatter,
+# then doi.org content negotiation (both with retries).
 fetch_apa_citation <- function(doi) {
-  response <- safely(httr::GET)(
+  response <- get_with_retry(
     "https://citation.doi.org/format",
     query = list(doi = doi, style = "apa", lang = "en-US")
   )
-
-  if (!is.null(response$error) || status_code(response$result) != 200) {
+  if (is.null(response)) {
+    response <- get_with_retry(
+      str_glue("https://doi.org/{doi}"),
+      add_headers(Accept = "text/x-bibliography; style=apa; locale=en-US")
+    )
+  }
+  if (is.null(response)) {
     warning(str_glue("Failed to retrieve citation for DOI: {doi}"))
     return(NULL)
   }
 
-  content(response$result, as = "text", encoding = "UTF-8") %>% str_trim()
+  content(response, as = "text", encoding = "UTF-8") %>% str_trim()
 }
 
 # Italicize an exact substring once (no-op if it isn't found)
@@ -113,10 +153,14 @@ generate_publication_list_from_file <- function(doi_file_path, highlight_author 
   }
 
   pubs <- pmap_dfr(dois, function(doi, section_override) {
-    citation_text <- fetch_apa_citation(doi)
-    if (is.null(citation_text)) return(NULL)
-
     meta <- fetch_crossref_metadata(doi)
+    citation_text <- fetch_apa_citation(doi) %||% citation_from_metadata(doi, meta)
+
+    # Never drop a publication silently: fall back to a plain DOI link
+    if (is.null(citation_text)) {
+      warning(str_glue("Using bare DOI link for: {doi}"))
+      citation_text <- str_glue("https://doi.org/{doi}")
+    }
     year <- as.integer(str_match(citation_text, "\\((\\d{4})")[, 2])
 
     tibble(

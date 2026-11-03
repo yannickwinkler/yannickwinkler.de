@@ -13,7 +13,7 @@ format:
     toc: false
 ---
 
-My research interests lie primarily in the areas of computational communication science, political communication, and user behavior on social media platforms. Below is a list of my peer-reviewed publications and conference presentations.
+My research interests lie primarily in the areas of computational communication science, political communication, and user behavior on social media platforms. Below is a list of my publications, including peer-reviewed journal articles, book chapters, and preprints, as well as conference presentations and invited talks.
 
 ## Publications
 
@@ -22,8 +22,8 @@ source("scripts/get_pubs.R")
 
 doi_file <- "pubs/dois.txt" 
 
-# Pass TRUE to group by year, FALSE for a single chronological list
-cat(generate_publication_list_from_file(doi_file_path = doi_file, group_by_year = TRUE))
+# Grouped by type (journal articles, book chapters, preprints); set group_by_year = TRUE for year subheadings
+cat(generate_publication_list_from_file(doi_file_path = doi_file, group_by_year = FALSE))
 ```
 
 ## Conference Presentations

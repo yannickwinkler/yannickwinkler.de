@@ -213,17 +213,15 @@ body.quarto-dark .dither-avatar .dither-dark { display: block; }
   mask: url(img/network.svg) right center / cover no-repeat;
 }
 
-/* Keep text readable: network fades out towards the bottom-left text area */
-.network-bg::before,
-.network-bg::after {
-  -webkit-mask-composite: source-in;
-  mask-composite: intersect;
-}
+/* Keep text readable: network fades out towards the bottom-left text area.
+   The composite must come after the mask shorthand, which resets it. */
 .network-bg::before {
   -webkit-mask: url(img/network.svg) right center / cover no-repeat,
     linear-gradient(200deg, #000 20%, rgba(0, 0, 0, 0.35) 55%, rgba(0, 0, 0, 0.12) 80%);
   mask: url(img/network.svg) right center / cover no-repeat,
     linear-gradient(200deg, #000 20%, rgba(0, 0, 0, 0.35) 55%, rgba(0, 0, 0, 0.12) 80%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
 }
 
 .network-bg::before {
@@ -232,15 +230,22 @@ body.quarto-dark .dither-avatar .dither-dark { display: block; }
 }
 
 .network-bg::after {
-  -webkit-mask-image: url(img/network-accent.svg), linear-gradient(#000, #000);
-  mask-image: url(img/network-accent.svg), linear-gradient(#000, #000);
+  -webkit-mask-image: url(img/network-accent.svg);
+  mask-image: url(img/network-accent.svg);
   background: var(--bs-primary);
   opacity: 0.9;
 }
 
-/* Small tile: keep the graphic in the background */
+/* Small tile: keep the graphic in the background and shift it down,
+   so the path runs through the empty space between text and link */
 .bento-research::before { opacity: 0.16; }
 .bento-research::after { opacity: 0.5; }
+.bento-research::before,
+.bento-research::after { transform: translateY(48%); }
+
+@media (max-width: 767.98px) {
+  .bento-research::after { display: none; }
+}
 
 /* ==========================================================================
    Research page header
@@ -248,7 +253,7 @@ body.quarto-dark .dither-avatar .dither-dark { display: block; }
 
 .research-hero {
   margin: 1.5rem 0 2.5rem;
-  padding: 9rem 2rem 2rem;
+  padding: 9rem 2rem 2.75rem;
   min-height: 18rem;
   display: flex;
   flex-direction: column;
@@ -262,7 +267,7 @@ body.quarto-dark .dither-avatar .dither-dark { display: block; }
 
 .hero-caption {
   position: absolute;
-  top: 1rem;
+  bottom: 0.9rem;
   font-size: 0.68rem;
 }
 .hero-caption-right { right: 1.25rem; }
@@ -328,3 +333,13 @@ body.quarto-dark .dither-avatar .dither-dark { display: block; }
 
 /* No site name in the navbar (it stays in the browser tab title) */
 .navbar-brand-container { display: none; }
+
+/* About page: dithered portrait (light/dark versions, crisp pixels) */
+.quarto-about-jolla .about-image {
+  image-rendering: pixelated;
+  outline: 1px solid rgba(127, 127, 127, 0.45);
+  outline-offset: 6px;
+}
+body.quarto-dark .quarto-about-jolla .about-image {
+  content: url(img/yw_dither_dark_240.png);
+}

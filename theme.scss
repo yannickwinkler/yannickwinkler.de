@@ -18,3 +18,12 @@ h1, h2, h3, h4 {
   font-weight: 650;
   letter-spacing: -0.01em;
 }
+
+// Bento tile tokens, computed per theme (light = cosmo, dark = darkly)
+.bento {
+  --tile-bg: #{mix($body-color, $body-bg, 4%)};
+  --tile-bg-strong: #{$body-bg};
+  --tile-border: #{rgba($body-color, 0.1)};
+  --tile-muted: #{mix($body-color, $body-bg, 60%)};
+  --tile-shadow: #{rgba(#000, if(lightness($body-bg) > 50%, 0.08, 0.35))};
+}

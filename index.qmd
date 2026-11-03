@@ -15,7 +15,7 @@ listing:
 ::: {.bento}
 
 ::: {.bento-tile .bento-intro}
-![](img/yw_ghibli.png){.bento-avatar fig-alt="Ghibli-style portrait of Yannick Winkler"}
+![](img/yw_avatar.jpg){.bento-avatar fig-alt="Ghibli-style portrait of Yannick Winkler"}
 
 <h1 class="bento-name">Yannick Winkler</h1>
 

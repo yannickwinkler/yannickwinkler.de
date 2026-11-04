@@ -1,5 +1,23 @@
 [
-    {
+  {
+    "year": 2026,
+    "authors": "Winkler, Y., Bachl, M., Scharkow, M., & Jürgens, P.",
+    "title": "When incivility becomes the norm: Understanding incivility in social media comments from a social norms perspective",
+    "conference": "76th Annual Conference of the International Communication Association (ICA)",
+    "location": "Cape Town, South Africa",
+    "slides_url": "",
+    "type": "conference"
+  },
+  {
+    "year": 2026,
+    "authors": "Fecher, H., Jost, P., & Winkler, Y.",
+    "title": "The Cost of Visibility: User Expectations, Selection, and Algorithmic Amplification in Political Short-Video Communication",
+    "conference": "76th Annual Conference of the International Communication Association (ICA)",
+    "location": "Cape Town, South Africa",
+    "slides_url": "",
+    "type": "conference"
+  },
+  {
     "year": 2025,
     "authors": "Winkler, Y., Jost, P., Fecher, H.",
     "title": "Not All Modalities Are Equal: Assessing the Impact of Text, Audio, and Visual Inputs on LLM Classification of Political Videos",

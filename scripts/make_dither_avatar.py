@@ -6,17 +6,19 @@ about page (240 px):
   img/yw_dither_light[_240].png  ink dots for the light (paper) theme
   img/yw_dither_dark[_240].png   cream dots for the dark theme (inverted, so
                                  it doesn't look like a photo negative)
+  img/favicon.png                64 px, ink dots on a round paper disc
 
 Run:  python3 scripts/make_dither_avatar.py
 """
 
 from pathlib import Path
 
-from PIL import Image, ImageEnhance, ImageFilter, ImageOps
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageOps
 
 SIZES = {160: "", 240: "_240"}   # CSS display size in px -> file suffix
 INK = (31, 29, 26)               # $body-color, theme-light.scss
 CREAM = (235, 230, 220)          # $body-color, theme-dark.scss
+PAPER = (245, 242, 235)          # $body-bg, theme-light.scss
 
 root = Path(__file__).resolve().parent.parent
 
@@ -57,8 +59,22 @@ def render(ink_map, colour, invert=False):
     return out
 
 
+def favicon(size=64):
+    """Ink dots on a round paper disc, so it stays visible on dark browser tabs."""
+    dots = render(atkinson(prepare(size)), INK)
+    disc = Image.new("L", (size * 4, size * 4), 0)
+    ImageDraw.Draw(disc).ellipse((0, 0, size * 4 - 1, size * 4 - 1), fill=255)
+    out = Image.new("RGBA", (size, size), (*PAPER, 0))
+    out.putalpha(disc.resize((size, size), Image.LANCZOS))
+    out.alpha_composite(Image.composite(dots, Image.new("RGBA", (size, size)), out.getchannel("A")))
+    return out
+
+
 for size, suffix in SIZES.items():
     src = prepare(size)
     render(atkinson(src), INK).save(root / "img" / f"yw_dither_light{suffix}.png", optimize=True)
     render(atkinson(ImageOps.invert(src)), CREAM).save(root / "img" / f"yw_dither_dark{suffix}.png", optimize=True)
     print(f"wrote img/yw_dither_light{suffix}.png, img/yw_dither_dark{suffix}.png")
+
+favicon().save(root / "img" / "favicon.png", optimize=True)
+print("wrote img/favicon.png")

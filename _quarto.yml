@@ -9,7 +9,7 @@ website:
   title: "Yannick Winkler"
   site-url: https://yannickwinkler.de
   description: "Computational communication science, political communication, and machine learning."
-  favicon: img/yw_ghibli.png
+  favicon: img/favicon.png
   open-graph: true
   navbar:
     left:
